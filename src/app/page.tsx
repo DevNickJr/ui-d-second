@@ -3,9 +3,9 @@ import { LuArrowUpRight } from "react-icons/lu";
 
 export default function Home() {
   return (
-    <div className="font-mono">
-      <div className="flex gap-10 justify-between items-end py-20 max-w-[800px] mx-auto mb-24">
-        <div className="flex flex-col gap-3 max-w-[480px]">
+    <div className="font-mono p-4">
+      <section className="flex gap-10 flex-col md:flex-row justify-between md:items-end py-10 md:py-20 max-w-[800px] mx-auto mb-24">
+        <div className="flex flex-col gap-3 md:max-w-[480px]">
           <Image
             src="/me.jpg"
             width={48}
@@ -13,8 +13,8 @@ export default function Home() {
             alt="hero"
             className="rounded-full bg-[#E5E5E5]"
           />
-          <h1 className="text-[32px] leading-[40px] font-normal font-serif text-transparent bg-[url(/text.jpg)] bg-clip-text bg-center tracking-[-2%]">Hi, I&apos;m David</h1>
-          <ul className="flex flex-col gap-[3px] text-base font-mono leading-[24px] tracking-[-3%]">
+          <h1 className="text-2xl md:text-[32px] leading-[40px] font-normal font-serif text-transparent bg-[url(/text.jpg)] bg-clip-text bg-center tracking-[-2%]">Hi, I&apos;m David</h1>
+          <ul className="flex flex-col gap-[3px] text-sm md:text-base font-mono leading-[24px] tracking-[-3%]">
             <li className="">&gt; Result-driven Product designer with 5 years of experience</li>
             <li className="">&gt; Work across Product, Brand and motion design</li>
             <li className="">&gt; Expertise in Saas and consumer products</li>
@@ -28,56 +28,51 @@ export default function Home() {
           width={254}
           height={254}
           alt="hero"
-          className="w-[254px] h-[254px] bg-[#E5E5E5]"
+          className="w-full md:w-[254px] aspect-square"
         />
-      </div>
+      </section>
       <section className="max-w-[800px] mx-auto w-full mb-24">
-        <div className="flex items-center gap-2 text-[#444444] mb-14">
-          <span className="text-sm whitespace-nowrap tracking-[-3%] eading-[28px]">Here&apos;s What I&apos;m good at</span>
+        <Seperator text="Here&apos;s What I&apos;m good at" />
+        {/* <div className="flex items-center gap-2 text-[#444444] mb-14">
+          <span className="text-xs md:text-sm whitespace-nowrap tracking-[-3%] eading-[28px]"></span>
           <div className="relative w-full">
             <span className="h-2 w-2 rounded-full absolute left-0 top-1/2 -translate-y-1/2 bg-[#444444]" />
             <div className="absolute h-[1px] w-full bg-[#444444]" />
           </div>
-        </div>
+        </div> */}
         <div className="grid md:grid-cols-2 gap-12 max-w-[800px] mx-auto md:px-12">
           <div className="flex flex-col gap-3.5">
             <h5 className="text-2xl italic leading-[40px] font-normal font-serif text-[#EEEEEE] tracking-[-2%]">Product Design</h5>
-            <p className="text-sm text-[#E5E5E5]">Designing software that bridges for ideas, technology, business and users.making user friendly applications.</p>
-            <div className="h-[233px] w-full bg-[#444444] rounded-xl relative">
+            <p className="text-sm text-[#E5E5E5] opacity-80">Designing software that bridges for ideas, technology, business and users.making user friendly applications.</p>
+            <div className="h-[233px] w-full rounded-xl relative">
               <video className='absolute h-full w-full rounded-xl z-10 left-0 top-0' autoPlay muted playsInline>
                 <source src="/product-design.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <a href="" className="flex items-center text-[#7EF1D0] text-base">
-              <span >See works</span>
+            <a href="" className="flex items-center text-[#7EF1D0] gap-1 text-sm md:text-base mt-4">
+              <span>See works</span>
               <LuArrowUpRight size={'1.3rem'} />
             </a>
           </div>
           <div className="flex flex-col gap-3.5">
             <h5 className="text-2xl italic leading-[40px] font-normal font-serif text-[#EEEEEE] tracking-[-2%]">Brand Design</h5>
-            <p className="text-sm text-[#E5E5E5]">Creating visual assets that communicates company tone of messaging with logos, colours, typography mockups, flyers.</p>
-            <div className="h-[233px] w-full bg-[#444444] rounded-xl relative">
+            <p className="text-sm text-[#E5E5E5] opacity-80">Creating visual assets that communicates company tone of messaging with logos, colours, typography mockups, flyers.</p>
+            <div className="h-[233px] w-full rounded-xl relative">
               <video className='absolute h-full w-full rounded-xl z-10 left-0 top-0' autoPlay muted playsInline>
                 <source src="/brand-design.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <a href="" className="flex items-center text-[#7EF1D0] text-base">
-              <span >See works</span>
+            <a href="" className="flex items-center text-[#7EF1D0] gap-1 text-sm md:text-base mt-4">
+              <span>See works</span>
               <LuArrowUpRight size={'1.3rem'} />
             </a>
           </div>
         </div>
       </section>
       <section className="max-w-[800px] mx-auto w-full mb-24">
-        <div className="flex items-center gap-2 text-[#444444] mb-14">
-          <span className="text-sm whitespace-nowrap tracking-[-3%] eading-[28px]">Some recent works here</span>
-          <div className="relative w-full">
-            <span className="h-2 w-2 rounded-full absolute left-0 top-1/2 -translate-y-1/2 bg-[#444444]" />
-            <div className="absolute h-[1px] w-full bg-[#444444]" />
-          </div>
-        </div>
+        <Seperator text="Some recent works here" />
         <div className="flex max-w-[703px] w-full mx-auto flex-col gap-16">
           <div className="flex flex-col gap-3 w-full">
             <Image
@@ -120,15 +115,9 @@ export default function Home() {
        
       </section>
       <section className="max-w-[800px] mx-auto w-full mb-24">
-        <div className="flex items-center gap-2 text-[#444444] mb-14">
-          <span className="text-sm whitespace-nowrap tracking-[-3%] eading-[28px]">Pretty straight forward right</span>
-          <div className="relative w-full">
-            <span className="h-2 w-2 rounded-full absolute left-0 top-1/2 -translate-y-1/2 bg-[#444444]" />
-            <div className="absolute h-[1px] w-full bg-[#444444]" />
-          </div>
-        </div>
-        <div className="flex max-w-[550px] w-full mx-auto flex-col gap-7">
-          <div className="flex justify-between flex-col md:flex-row font-medium gap-4">
+        <Seperator text="Pretty straight forward right" />
+        <div className="flex max-w-[550px] w-full mx-auto flex-col gap-7 text-xs md:text-sm">
+          <div className="flex justify-between flex-row font-medium gap-4 flex-wrap">
             <div className="flex flex-col gap-1">
               <span className="text-[#444444]">Contact me here</span>
               <span>davidikperi@gmail.com</span>
@@ -140,7 +129,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-1">
             <span className="text-[#444444]">Some links</span>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap">
               <a href="" target="_blank">Twitter</a>
               <a href="" target="_blank">LinkedIn</a>
               <a href="" target="_blank">Behance</a>
@@ -153,4 +142,17 @@ export default function Home() {
       </section>
     </div>
   );
+}
+
+
+const Seperator = ({ text }: { text: string }) => {
+  return (
+    <div className="flex items-center gap-2 text-[#444444] mb-14">
+      <span className="text-xs md:text-sm whitespace-nowrap tracking-[-3%] eading-[28px]">{text}</span>
+      <div className="relative w-full">
+        <span className="h-2 w-2 rounded-full absolute left-0 top-1/2 -translate-y-1/2 bg-[#444444]" />
+        <div className="absolute h-[1px] w-full bg-[#444444]" />
+      </div>
+    </div>
+  )
 }
